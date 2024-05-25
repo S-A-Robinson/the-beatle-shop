@@ -1,95 +1,35 @@
 import Image from "next/image";
+import { Raleway } from 'next/font/google';
 import styles from "./page.module.css";
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['700'],
+});
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+    <div className={raleway.className}>
+      <div id={styles.banner}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          id={styles.bannerImage}
+          src='/beetle-side-view.jpg'
+          alt='orange beetle side view'
+          fill={true}
+          objectFit="cover"
         />
+        <span id={styles.bannerTitle}>The Beetle Shop</span>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <main id={styles.main}>
+        <div className={styles.section}>
+          <h1 className={styles.heading}>Welcome To <span style={{textDecoration: 'underline'}}>The Beetle Shop</span></h1>
+          <p>The #1 place for both used and restored classic Beetles. Come pay us a visit and find your dream car.</p>
+        </div>
+        <div className={`${styles.section} ${styles.alignRight}`}>
+          <h1 className={styles.heading}>B.Y.O.B. <span style={{fontSize: '0.5em', fontStyle: 'italic'}}>(Bring Your Own Beetle)</span></h1>
+          <p>Bring in your own car and we will walk you through any and all adjustments you want to make: from a fresh lick of paint to a full restoration, we've got you covered.</p>
+        </div>
+      </main>
+    </div>
   );
 }
