@@ -30,7 +30,7 @@ const Scroller = () => {
   return (
     <div className={styles.scroller} ref={scroller}>
       <ul className={styles.scroller__inner} ref={scrollerInner}>
-        <li>
+        <li className={styles.scroller__image}>
           <Image
             src='/annie-spratt-2skAoB8Rjzk-unsplash.jpg'
             alt='beetle interior'
@@ -38,7 +38,7 @@ const Scroller = () => {
             style={{objectFit: 'cover'}}
             ></Image>
         </li>
-        <li>
+        <li className={styles.scroller__image}>
           <Image
             src='/annie-spratt-BPnEPgxY5SA-unsplash.jpg'
             alt='beetle interior'
@@ -46,7 +46,7 @@ const Scroller = () => {
             style={{objectFit: 'cover'}}
             ></Image>
         </li>
-        <li>
+        <li className={styles.scroller__image}>
           <Image
             src='/fernando-venancio-da-silva-skTKCC0-Sy4-unsplash.jpg'
             alt='beetle interior'
@@ -54,7 +54,7 @@ const Scroller = () => {
             style={{objectFit: 'cover'}}
             ></Image>
         </li>
-        <li>
+        <li className={styles.scroller__image}>
           <Image
             src='/tom-arrowsmith-7HNftpNvqho-unsplash.jpg'
             alt='beetle interior'
@@ -62,7 +62,7 @@ const Scroller = () => {
             style={{objectFit: 'cover'}}
             ></Image>
         </li>
-        <li>
+        <li className={styles.scroller__image}>
           <Image
             src='/vasilios-muselimis-EocaKkccbxM-unsplash.jpg'
             alt='beetle interior'
@@ -70,7 +70,7 @@ const Scroller = () => {
             style={{objectFit: 'cover'}}
             ></Image>
         </li>
-        <li>
+        <li className={styles.scroller__image}>
           <Image
             src='/wes-hicks-mDASgFtuMRQ-unsplash.jpg'
             alt='beetle interior'

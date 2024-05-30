@@ -12,7 +12,7 @@
   list-style: none;
 }
 
-.scroller__inner li {
+.scroller__image {
   width: 576px;
   height: 324px;
   position: relative;
@@ -37,5 +37,29 @@
 @keyframes scroll {
   to {
     translate: calc(-50% - 0.5rem);
+  }
+}
+
+@keyframes expand {
+  from {
+    scale: 1;
+    margin: 0 0;
+  }
+
+  to {
+    scale: 1.2;
+    margin: 0 2vw;
+  }
+}
+
+@keyframes return {
+  from {
+    scale: 1.2;
+    margin: 0 2vw;
+  }
+
+  to {
+    scale: 1;
+    margin: 0 0;
   }
 }
