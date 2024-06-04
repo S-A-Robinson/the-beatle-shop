@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 3rem;
+  transition: background-color 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.header__bg {
+  background-color: #131516;
+}
+
+.title {
+  display: block;
+  position: relative;
+  width: fit-content;
+  translate: calc(50vw - 50%);
+  font-size: 2em;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 3s;
+  transition: translate 1s cubic-bezier(0.86, 0, 0.07, 1), color 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.title_scrolled {
+  translate: calc(1rem);
+  color: orangered;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
