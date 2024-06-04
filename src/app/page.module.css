@@ -61,6 +61,15 @@
   color: orangered;
 }
 
+.shadowText {
+  text-shadow: 3px -3px 0px rgba(223, 59, 0, 1), 6px -6px 0px rgba(155, 41, 0, 1), 9px -9px 0px rgb(117, 31, 0);
+  transition: text-shadow 1s;
+}
+
+.shadowText:hover {
+  text-shadow: none;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <main id={styles.main}>
         <div className={styles.section}>
-          <h1 className={styles.heading}>Welcome To <span style={{textDecoration: 'underline'}}>The Beetle Shop</span></h1>
+          <h1 className={styles.heading}>Welcome To <span className={styles.shadowText}>The Beetle Shop</span></h1>
           <p>The #1 place for both used and restored classic Beetles. Come pay us a visit and find your dream car.</p>
         </div>
       <Scroller />

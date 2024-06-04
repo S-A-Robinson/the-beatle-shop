@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
@@ -11,7 +11,10 @@ const Navbar = () => {
     else setIsScrolled(false);
   }
 
-  window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  });
+  
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.header__bg : ''}`}>
